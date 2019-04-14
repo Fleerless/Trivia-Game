@@ -1,0 +1,28 @@
+body {
+    background: rgb(122, 1, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    background: aliceblue;
+}
+div {
+    display: flex;
+    align-self: center;
+    margin: 10px 0 10px 0;
+}
+h1 {
+    display: flex;
+    align-self: center;
+}
+#choices {
+    display: flex;
+    flex-direction: column;
+}
