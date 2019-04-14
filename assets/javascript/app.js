@@ -9,6 +9,14 @@ var correct = 0;
 var wrong = 0;
 var clickedAnswer;
 
+var startButton =$("<button>");
+startButton.attr("id", "startButton");
+startButton.text("START");
+$("#choices").append(startButton);
+$("#startButton").click(function(){
+    startGame();
+})
+
 function startGame() {
     $("#question").html(questions[qIndex][0]);
     $("#choices").empty();
@@ -25,7 +33,6 @@ function startGame() {
             clickedAnswer = $(this).attr("number");
     }) 
 };
-startGame();
 
 function timer(){
     time--;
