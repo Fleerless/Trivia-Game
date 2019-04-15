@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-var questions = [["Question 1", "1"], ["Question 2", "2"], ["Question 3", "3"]];
-var choices = [["Answeer 1", "Answer 2", "answer 3", "Answer 4"], ["Answeer 1", "answer 2", "Answer 3", "Answer 4"],["Answeer 1", "Answer 2", "answer 3", "Answer 4"], ["Answeer 1", "Answer 2", "answer 3", "Answer 4"]];
+var questions = [["2+2= ?", "1"], ["What is the name of Jim Carey's character in the movie 'Dumb and Dumber'?", "2"], ["Which song did Nickleback sing", "3"]];
+var choices = [["4", "2", "3", "1"], ["Harry Dunne", "Lloyd Christmas", "Sea Bass", "Stanley Ipkiss"],["With Arms Wide Open", "My Generation", "Rockstar", "Mud on the Tires"], ["Answeer 1", "Answer 2", "answer 3", "Answer 4"]];
 var qIndex = 0;
-var time=3;
+var time=5;
 var countdown;
 var correct = 0;
 var wrong = 0;
@@ -31,6 +31,8 @@ function startGame() {
         });
         $(".buttons").click(function(){
             clickedAnswer = $(this).attr("number");
+            $(".buttons").removeClass("clicked");
+            $(this).addClass("clicked");
     }) 
 };
 
@@ -40,7 +42,7 @@ function timer(){
     endGame();  
     if (time === 0) {
         getScore();
-        time=3;
+        time=5;
         qIndex++;
         clickedAnswer = "";
         if (qIndex < questions.length){
@@ -56,6 +58,8 @@ function timer(){
         }); 
         $(".buttons").click(function(){
             clickedAnswer = $(this).attr("number");
+            $(".buttons").removeClass("clicked");
+            $(this).addClass("clicked");
     });
     }}
 };
