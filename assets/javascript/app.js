@@ -3,7 +3,7 @@ $(document).ready(function(){
 var questions = [["2+2= ?", "1"], ["What is the name of Jim Carey's character in the movie 'Dumb and Dumber'?", "2"], ["Which song did Nickleback sing", "3"]];
 var choices = [["4", "2", "3", "1"], ["Harry Dunne", "Lloyd Christmas", "Sea Bass", "Stanley Ipkiss"],["With Arms Wide Open", "My Generation", "Rockstar", "Mud on the Tires"], ["Answeer 1", "Answer 2", "answer 3", "Answer 4"]];
 var qIndex = 0;
-var time=5;
+var time=30;
 var countdown;
 var correct = 0;
 var wrong = 0;
